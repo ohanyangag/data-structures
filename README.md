@@ -1,1 +1,3 @@
-# data-structures
+# Data structures
+
+Data structures implementation in Java
