@@ -8,6 +8,7 @@ public class Queue<T> {
 
     public T enqueue(T element) {
         if(isFull()) throw new RuntimeException("Queue is full");
+        
         data[rear++] = element;
         rear = changeIndex(rear, data.length);
 
@@ -16,6 +17,7 @@ public class Queue<T> {
 
     public T dequeue() {
         if(isEmpty()) throw new RuntimeException("Queue is empty");
+        
         front = changeIndex(front, data.length);
 
         return (T) data[front++];
@@ -23,6 +25,7 @@ public class Queue<T> {
 
     public T peek() {
         if(isEmpty()) throw new RuntimeException("Queue is empty");
+        
         front = changeIndex(front, data.length);
 
         return (T) data[front];
