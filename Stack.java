@@ -14,6 +14,7 @@ public class Stack<T> {
         if(top == capacity) increaseCapacity();
 
         data[top++] = t;
+        
         return t;
     }
 
@@ -22,6 +23,7 @@ public class Stack<T> {
 
         T element = (T) data[--top];
         data[top] = null;
+        
         return element;
     }
 
