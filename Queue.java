@@ -1,6 +1,7 @@
 public class Queue<T> {
     private T[] data;
     private int rear, front;
+    
     public Queue(int capacity) {
         front = rear = 0;
         data = (T[]) new Object[capacity + 1];
@@ -34,6 +35,7 @@ public class Queue<T> {
     public boolean isEmpty() {
         return front == rear;
     }
+    
     public int size() {
         return changeIndex(rear + data.length - front, data.length);
     }
@@ -41,6 +43,7 @@ public class Queue<T> {
     public boolean isFull() {
         return (front + data.length - rear) % data.length == 1;
     }
+    
     private int changeIndex(int index, int capacity) {
         if(index >= capacity)
             return index - capacity;
