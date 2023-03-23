@@ -33,13 +33,16 @@ public class Stack<T> {
         return (T) data[top - 1];
     }
 
-    public boolean isEmpty() { return top == 0; }
+    public boolean isEmpty() {
+        return top == 0;
+    }
 
-    public int size() { return top; }
+    public int size() {
+        return top;
+    }
 
     private void increaseCapacity() {
         capacity *= 2;
         data = Arrays.copyOf(data, capacity);
     }
 }
-
