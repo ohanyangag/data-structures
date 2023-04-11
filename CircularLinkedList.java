@@ -25,7 +25,7 @@ public class CircularLinkedList {
         last = newNode;
     }
 
-    private boolean remove(String value) {
+    public boolean remove(String value) {
         if(last == null) return false;
         if(removeFirst(value)) return true;
 
